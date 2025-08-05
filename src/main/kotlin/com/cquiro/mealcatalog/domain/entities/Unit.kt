@@ -1,4 +1,4 @@
-package com.cquiro.mealcatalog.domain
+package com.cquiro.mealcatalog.domain.entities
 
 enum class Unit(val fullName: String, val symbol: String) {
     GRAM("Gram", "g"),

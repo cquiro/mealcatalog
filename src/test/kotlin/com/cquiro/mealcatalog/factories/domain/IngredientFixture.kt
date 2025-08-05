@@ -1,7 +1,8 @@
 package com.cquiro.mealcatalog.factories.domain
 
-import com.cquiro.mealcatalog.domain.Ingredient
-import com.cquiro.mealcatalog.domain.Unit
+import com.cquiro.mealcatalog.domain.entities.Ingredient
+import com.cquiro.mealcatalog.domain.entities.Unit
+
 fun createIngredient(
     name: String = "Chicken Breast",
     unit: Unit = Unit.GRAM,

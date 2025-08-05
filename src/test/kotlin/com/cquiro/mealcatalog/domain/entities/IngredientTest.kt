@@ -1,6 +1,6 @@
-package com.cquiro.mealcatalog.domain
+package com.cquiro.mealcatalog.domain.entities
 
-import org.junit.jupiter.api.Assertions.assertEquals
+import org.junit.jupiter.api.Assertions
 import org.junit.jupiter.api.assertThrows
 import org.junit.jupiter.params.ParameterizedTest
 import org.junit.jupiter.params.provider.Arguments
@@ -25,7 +25,7 @@ class IngredientTest {
             )
         }
 
-        assertEquals(expectedMessage, exception.message)
+        Assertions.assertEquals(expectedMessage, exception.message)
     }
 
     companion object {

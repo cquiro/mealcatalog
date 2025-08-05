@@ -1,4 +1,4 @@
-package com.cquiro.mealcatalog.domain
+package com.cquiro.mealcatalog.domain.entities
 
 class Ingredient(
     val name: String,
