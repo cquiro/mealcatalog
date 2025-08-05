@@ -10,7 +10,7 @@ class IngredientTest {
 
     @ParameterizedTest
     @MethodSource("testCases")
-    fun `throws exception when instantiated with an invalid value`(
+    fun `throws exception when instantiated with negative nutritional values`(
         values: Map<String, Int>,
         expectedMessage: String,
     ) {
