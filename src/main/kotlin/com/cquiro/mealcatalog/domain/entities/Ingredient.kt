@@ -3,6 +3,7 @@ package com.cquiro.mealcatalog.domain.entities
 class Ingredient(
     val name: String,
     val unit: Unit,
+    val slug: String,
     val proteinPer100g: Int,
     val saturatedFatPer100g: Int,
     val fiberPer100g: Int,

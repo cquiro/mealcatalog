@@ -6,6 +6,7 @@ import com.cquiro.mealcatalog.domain.entities.Unit
 fun createIngredient(
     name: String = "Chicken Breast",
     unit: Unit = Unit.GRAM,
+    slug: String = "chicken-breast",
     proteinPer100g: Int = 31,
     saturatedFatPer100g: Int = 1,
     fiberPer100g: Int = 0,
@@ -13,6 +14,7 @@ fun createIngredient(
 ) = Ingredient(
     name = name,
     unit = unit,
+    slug = slug,
     proteinPer100g = proteinPer100g,
     saturatedFatPer100g = saturatedFatPer100g,
     fiberPer100g = fiberPer100g,

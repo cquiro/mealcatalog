@@ -18,6 +18,7 @@ class IngredientTest {
             Ingredient(
                 name = "Olive Oil",
                 unit = Unit.TEASPOON,
+                slug = "olive-oil",
                 proteinPer100g = values["protein"]!!,
                 saturatedFatPer100g = values["saturatedFat"]!!,
                 fiberPer100g = values["fiber"]!!,
