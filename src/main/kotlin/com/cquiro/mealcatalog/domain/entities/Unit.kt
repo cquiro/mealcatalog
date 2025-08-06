@@ -7,5 +7,11 @@ enum class Unit(val fullName: String, val symbol: String) {
     CUP("Cup", "cup"),
     MILLILITER("Milliliter", "mL"),
     LITER("Liter", "L"),
-    PINCH("Pinch", "pinch"),
+    PINCH("Pinch", "pinch");
+
+    companion object {
+        fun fromString(value: String): Unit =
+            enumValues<Unit>().firstOrNull { it.name.equals(value, ignoreCase = true) }
+                ?: throw IllegalArgumentException("Invalid unit: $value")
+    }
 }
