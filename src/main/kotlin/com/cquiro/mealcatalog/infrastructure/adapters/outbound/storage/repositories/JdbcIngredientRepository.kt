@@ -1,4 +1,4 @@
-package com.cquiro.mealcatalog.infrastructure.repositories
+package com.cquiro.mealcatalog.infrastructure.adapters.outbound.storage.repositories
 
 import com.cquiro.mealcatalog.domain.entities.Ingredient
 import com.cquiro.mealcatalog.domain.repositories.IngredientRepository

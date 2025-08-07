@@ -1,4 +1,4 @@
-package com.cquiro.mealcatalog.infrastructure.records
+package com.cquiro.mealcatalog.infrastructure.adapters.outbound.storage.records
 
 import com.cquiro.mealcatalog.domain.entities.Ingredient
 import com.cquiro.mealcatalog.domain.entities.Unit
