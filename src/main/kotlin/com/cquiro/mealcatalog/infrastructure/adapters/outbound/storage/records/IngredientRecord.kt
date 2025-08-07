@@ -20,6 +20,7 @@ data class IngredientRecord(
 ) {
     fun toDomain() =
         Ingredient(
+            id = id,
             name = name,
             unit = Unit.fromString(unit),
             slug = slug,
@@ -30,16 +31,18 @@ data class IngredientRecord(
         )
 
     companion object {
-        fun fromDomain(id: UUID, ingredient: Ingredient) =
-            IngredientRecord(
-                id = id,
-                slug = ingredient.slug,
-                name = ingredient.name,
-                unit = ingredient.unit.fullName,
-                proteinPer100g = ingredient.proteinPer100g,
-                saturatedFatPer100g = ingredient.saturatedFatPer100g,
-                fiberPer100g = ingredient.fiberPer100g,
-                addedSugarsPer100g = ingredient.addedSugarPer100g,
-            )
+        fun fromDomain(ingredient: Ingredient) =
+            with(ingredient) {
+                IngredientRecord(
+                    id = id,
+                    slug = slug,
+                    name = name,
+                    unit = unit.fullName,
+                    proteinPer100g = proteinPer100g,
+                    saturatedFatPer100g = saturatedFatPer100g,
+                    fiberPer100g = fiberPer100g,
+                    addedSugarsPer100g = addedSugarPer100g,
+                )
+            }
     }
 }

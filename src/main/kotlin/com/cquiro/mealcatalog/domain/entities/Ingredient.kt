@@ -1,6 +1,9 @@
 package com.cquiro.mealcatalog.domain.entities
 
+import java.util.UUID
+
 class Ingredient(
+    val id: UUID,
     val name: String,
     val unit: Unit,
     val slug: String,

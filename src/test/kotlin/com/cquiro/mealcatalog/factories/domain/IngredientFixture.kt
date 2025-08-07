@@ -2,8 +2,11 @@ package com.cquiro.mealcatalog.factories.domain
 
 import com.cquiro.mealcatalog.domain.entities.Ingredient
 import com.cquiro.mealcatalog.domain.entities.Unit
+import com.cquiro.mealcatalog.utils.FixedUUID
+import java.util.UUID
 
 fun createIngredient(
+    id: UUID = FixedUUID.INGREDIENT_UUID,
     name: String = "Chicken Breast",
     unit: Unit = Unit.GRAM,
     slug: String = "chicken-breast",
@@ -12,6 +15,7 @@ fun createIngredient(
     fiberPer100g: Int = 0,
     addedSugarPer100g: Int = 0,
 ) = Ingredient(
+    id = id,
     name = name,
     unit = unit,
     slug = slug,

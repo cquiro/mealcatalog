@@ -1,5 +1,6 @@
 package com.cquiro.mealcatalog.domain.entities
 
+import com.cquiro.mealcatalog.utils.FixedUUID
 import org.junit.jupiter.api.Assertions
 import org.junit.jupiter.api.assertThrows
 import org.junit.jupiter.params.ParameterizedTest
@@ -16,6 +17,7 @@ class IngredientTest {
     ) {
         val exception = assertThrows<IllegalArgumentException> {
             Ingredient(
+                id = FixedUUID.INGREDIENT_UUID,
                 name = "Olive Oil",
                 unit = Unit.TEASPOON,
                 slug = "olive-oil",
