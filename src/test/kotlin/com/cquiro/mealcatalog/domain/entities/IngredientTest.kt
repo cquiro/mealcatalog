@@ -8,25 +8,25 @@ import org.junit.jupiter.params.provider.Arguments
 import org.junit.jupiter.params.provider.MethodSource
 
 class IngredientTest {
-
     @ParameterizedTest
     @MethodSource("testCases")
     fun `throws exception when instantiated with negative nutritional values`(
         values: Map<String, Int>,
         expectedMessage: String,
     ) {
-        val exception = assertThrows<IllegalArgumentException> {
-            Ingredient(
-                id = FixedUUID.INGREDIENT_UUID,
-                name = "Olive Oil",
-                unit = Unit.TEASPOON,
-                slug = "olive-oil",
-                proteinPer100g = values["protein"]!!,
-                saturatedFatPer100g = values["saturatedFat"]!!,
-                fiberPer100g = values["fiber"]!!,
-                addedSugarPer100g = values["addedSugar"]!!,
-            )
-        }
+        val exception =
+            assertThrows<IllegalArgumentException> {
+                Ingredient(
+                    id = FixedUUID.INGREDIENT_UUID,
+                    name = "Olive Oil",
+                    unit = Unit.TEASPOON,
+                    slug = "olive-oil",
+                    proteinPer100g = values["protein"]!!,
+                    saturatedFatPer100g = values["saturatedFat"]!!,
+                    fiberPer100g = values["fiber"]!!,
+                    addedSugarPer100g = values["addedSugar"]!!,
+                )
+            }
 
         Assertions.assertEquals(expectedMessage, exception.message)
     }

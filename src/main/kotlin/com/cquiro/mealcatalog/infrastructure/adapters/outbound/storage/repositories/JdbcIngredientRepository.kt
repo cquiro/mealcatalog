@@ -6,8 +6,7 @@ import org.springframework.stereotype.Repository
 
 @Repository
 class JdbcIngredientRepository(
-    val ingredientRecordRepository: IngredientRecordRepository
+    val ingredientRecordRepository: IngredientRecordRepository,
 ) : IngredientRepository {
-    override fun findAll(): List<Ingredient> =
-        ingredientRecordRepository.findAll().map { it.toDomain() }
+    override fun findAll(): List<Ingredient> = ingredientRecordRepository.findAll().map { it.toDomain() }
 }

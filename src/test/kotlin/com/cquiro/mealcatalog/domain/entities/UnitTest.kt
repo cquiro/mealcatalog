@@ -8,7 +8,6 @@ import org.junit.jupiter.params.provider.Arguments
 import org.junit.jupiter.params.provider.MethodSource
 
 class UnitTest {
-
     @ParameterizedTest
     @MethodSource("testCases")
     fun `returns a Unit instance from a valid string`(
@@ -22,9 +21,10 @@ class UnitTest {
     fun `returns a Unit instance from a valid string`() {
         val expectedMessage = "Invalid unit: invalid value"
 
-        val exception = assertThrows<IllegalArgumentException> {
-            Unit.fromString("invalid value")
-        }
+        val exception =
+            assertThrows<IllegalArgumentException> {
+                Unit.fromString("invalid value")
+            }
 
         assertEquals(expectedMessage, exception.message)
     }
@@ -34,34 +34,33 @@ class UnitTest {
         fun testCases(): List<Arguments> =
             listOf(
                 Arguments.of(
-                "GRAM",
+                    "GRAM",
                     Unit.GRAM,
                 ),
                 Arguments.of(
-                "TEASPOON",
+                    "TEASPOON",
                     Unit.TEASPOON,
                 ),
                 Arguments.of(
-                "TABLESPOON",
+                    "TABLESPOON",
                     Unit.TABLESPOON,
                 ),
                 Arguments.of(
-                "CUP",
+                    "CUP",
                     Unit.CUP,
                 ),
                 Arguments.of(
-                "MILLILITER",
+                    "MILLILITER",
                     Unit.MILLILITER,
                 ),
                 Arguments.of(
-                "LITER",
+                    "LITER",
                     Unit.LITER,
                 ),
                 Arguments.of(
-                "PINCH",
+                    "PINCH",
                     Unit.PINCH,
                 ),
             )
     }
-
 }

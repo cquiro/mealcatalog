@@ -12,6 +12,5 @@ class IngredientController(
     private val ingredientRepository: IngredientRepository,
 ) {
     @GetMapping
-    fun getIngredients(): List<IngredientDTO> =
-        ingredientRepository.findAll().map { IngredientDTO.fromDomain(it) }
+    fun getIngredients(): List<IngredientDTO> = ingredientRepository.findAll().map { IngredientDTO.fromDomain(it) }
 }
